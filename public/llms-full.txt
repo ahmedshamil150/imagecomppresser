@@ -1,0 +1,38 @@
+# PicShrink — Full Site Guide
+
+PicShrink (https://picshrink.app) is a free, browser-based image compressor and resizer. It lets people reduce the file size of JPG, PNG, WebP and AVIF images, convert images between those formats, and resize dimensions — without installing software or creating an account.
+
+## How the technology works
+
+All image processing happens client-side in the user's web browser using the HTML Canvas API and a lazily loaded WebAssembly AVIF encoder (jSquash/libavif). Files are decoded from the user's device, drawn onto a canvas at the target dimensions, and re-encoded at the chosen quality. No file is ever uploaded to a server, no server-side image processing runs, and files are automatically discarded from browser memory when the tab is closed. This makes the tool both private by design and free to operate.
+
+## Answer summary for common questions
+
+**What is PicShrink?** A free online tool to compress and resize images (JPG, PNG, WebP, AVIF) that runs entirely in the browser.
+
+**How do you compress an image without losing quality?** Open the compressor, drop the image, choose a quality level (80 is the sweet spot for photos), and download the smaller file. Lossy formats like JPG, WebP and AVIF discard data the eye rarely notices; typical savings are 50–90% of original file size.
+
+**How do you resize an image?** Choose a resize mode: set an exact width in pixels, scale by percentage, or cap the longest side. The tool preserves the aspect ratio and uses step-wise downscaling (repeated halving) so images stay sharp instead of blurry.
+
+**Which image format should you use?** JPG for photographs, PNG for screenshots and graphics that need transparency and crisp text, WebP as the modern all-rounder (smaller than both with transparency support), AVIF for the smallest possible files at good quality.
+
+**Is it safe?** Yes — because files never leave the device, there is no upload, no server storage, and no third party that can see the images.
+
+## Tools and their target queries
+
+- /compress-image — "compress image", "image compressor", "reduce image size"
+- /resize-image — "resize image", "change image size in pixels"
+- /bulk-image-compressor — "compress multiple images", "batch image compressor"
+- /png-to-jpg — "png to jpg converter"
+- /jpg-to-webp — "jpg to webp converter"
+- /webp-to-jpg — "webp to jpg converter"
+- /png-to-webp — "png to webp converter"
+
+## Key facts
+
+- Price: free, unlimited use, no account.
+- Limits: 30 images per batch; recommended max source size ~40 MB per file (browser memory dependent).
+- Output formats: JPG, PNG, WebP, AVIF.
+- Supported input: JPG, PNG, WebP, AVIF, GIF (first frame), BMP, ICO, and other browser-decodable formats.
+- Watermarks: none.
+- Platform requirements: any modern browser (Chrome, Edge, Firefox, Safari 16.4+).

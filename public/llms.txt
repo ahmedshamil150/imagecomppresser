@@ -1,0 +1,36 @@
+# PicShrink
+
+> Free online image compressor and resizer. Shrink JPG, PNG, WebP and AVIF files, convert between formats, and resize images — all processed locally in the user's browser. No uploads, no watermarks, no account required.
+
+PicShrink is a browser-based image optimization toolkit. Images are decoded, resized, and re-encoded with the browser's own image codecs (plus a WebAssembly AVIF encoder), so files never leave the user's device.
+
+## Tools
+
+- [Compress images](/compress-image): Reduce JPG, PNG, WebP and AVIF file size with a quality slider while keeping visual quality.
+- [Resize images](/resize-image): Change image dimensions by width, percentage, or maximum longest side without blurring.
+- [Bulk image compressor](/bulk-image-compressor): Optimize up to 30 images at once and download them as a ZIP.
+- [PNG to JPG converter](/png-to-jpg): Convert PNG files to JPG with a white background for smaller photos.
+- [JPG to WebP converter](/jpg-to-webp): Convert JPG photos to modern WebP format for faster websites.
+- [WebP to JPG converter](/webp-to-jpg): Turn WebP images into universally compatible JPG files.
+- [PNG to WebP converter](/png-to-webp): Convert PNG graphics to WebP to cut file size while keeping transparency.
+
+## Guides
+
+- [How it works](/how-it-works): The three-step flow behind the tool.
+- [Image formats explained](/formats): JPG, PNG, WebP and AVIF compared — when to use each.
+
+## Articles
+
+- [How to Compress an Image Without Losing Quality](/blog/how-to-compress-images)
+- [How to Resize an Image Without Blurring It](/blog/how-to-resize-an-image)
+- [JPG vs PNG vs WebP vs AVIF: Which Format Should You Use?](/blog/jpg-vs-png-vs-webp-vs-avif)
+- [How to Convert a PNG to JPG (Free, in Your Browser)](/blog/convert-png-to-jpg)
+- [How to Convert JPG to WebP for Faster Websites](/blog/convert-jpg-to-webp)
+- [How to Compress Multiple Images at Once](/blog/compress-images-in-bulk)
+- [Why Your Website Images Are Slow (And How to Fix It)](/blog/slow-website-images)
+- [Are Online Image Compressors Safe?](/blog/are-online-image-compressors-safe)
+
+## Optional
+
+- [Privacy policy](/privacy): Explains that images are processed locally and never uploaded.
+- [Terms of service](/terms): Rules for using the service.

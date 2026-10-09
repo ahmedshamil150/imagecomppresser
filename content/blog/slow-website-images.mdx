@@ -1,0 +1,73 @@
+---
+title: "Why Your Website Images Are Slow (And How to Fix It)"
+description: "The five reasons images drag down page speed — oversized dimensions, wrong format, no compression — and the fixes that recover the most weight."
+date: "2026-09-04"
+tags: ["web performance", "Core Web Vitals"]
+---
+
+Images make websites slow for five predictable reasons: they are stored at **larger dimensions than displayed**, saved in the **wrong file format**, shipped **without compression**, loaded **without lazy loading**, and delivered through **no CDN or modern encoding pipeline**. Fix the first three — resize, convert, compress — and you will usually remove more than half of your page weight with an afternoon of work.
+
+## 1. The image is bigger than the space it fills
+
+The most common mistake on the web. A 4000×3000 photo placed in an 800 px column downloads roughly 25× more pixels than the visitor ever sees.
+
+**The fix:** export at the display size (or 2× for retina, no more) using a [resizer](/resize-image). Hero images at 1600 px, content images at 800–1200 px.
+
+## 2. The format fights the content
+
+Photographs stored as PNG are the classic offender — a photo PNG can be 10× larger than the same image as JPG and 20× larger than WebP. Screenshots stored as JPG develop ringing artifacts around text, tempting you to raise quality (and size) to compensate.
+
+**The fix:** match format to content — see the [format comparison](/blog/jpg-vs-png-vs-webp-vs-avif) — then convert with the free tools on this site:
+
+- [PNG to JPG →](/png-to-jpg)
+- [JPG to WebP →](/jpg-to-webp)
+- [PNG to WebP →](/png-to-webp)
+
+## 3. Nobody pressed compress
+
+Phone cameras save aggressive-but-still-heavy files, and CMS uploads rarely re-encode. The result: multi-megabyte images on pages that should weigh under 500 KB total.
+
+**The fix:** run every image through a [compressor](/compress-image) at quality 80 before publishing. Typical savings: 50–80%, invisible to visitors.
+
+## 4. Everything loads at once
+
+Ten hero-sized images above and below the fold all downloading immediately saturates the connection and delays the Largest Contentful Paint element itself.
+
+**The fix:** add `loading="lazy"` to images below the fold, keep the LCP hero image eager and preloaded, and let the browser fetch only what is near the viewport.
+
+## 5. No modern delivery pipeline
+
+Serving 2026 JPGs to 2026 browsers leaves compression on the table: AVIF and WebP deliver equal quality at 30–60% fewer bytes.
+
+**The fix:** if you use a CDN or image service, enable automatic format negotiation. On a small site, export WebP/AVIF yourself and use the `<picture>` fallback pattern.
+
+## The audit checklist
+
+Run through this for any slow page:
+
+- [ ] Longest side ≤ 1600 px for heroes, ≤ 1200 px for content
+- [ ] Photos in WebP or JPG, graphics in WebP or PNG
+- [ ] Quality 80 (photos) / 90 (screenshots)
+- [ ] Below-the-fold images lazy-loaded
+- [ ] Hero image preloaded and sized with width/height attributes
+- [ ] Total image weight under 500 KB per page
+
+You can check real numbers with Google PageSpeed Insights — the "Serve images in next-gen formats" and "Properly size images" opportunities map directly to steps 2 and 1 above.
+
+## Where to start right now
+
+Take your worst-performing page, export its three largest images through the [bulk compressor](/bulk-image-compressor) with resize enabled, and re-measure. Single-page improvements of 40–70% are routine — and unlike code refactors, this fix takes minutes.
+
+## FAQ
+
+### How much do images affect page speed?
+
+Typically 50% or more of total page weight. On image-heavy pages — portfolios, stores, travel blogs — they account for 80–90%.
+
+### What is a good image weight per page?
+
+Under 500 KB total for content pages; up to ~1 MB for image-led landing pages. Individual images should rarely exceed 150–250 KB.
+
+### Does compression hurt SEO?
+
+It helps. Page experience signals — including Core Web Vitals, where image weight is a leading factor — feed into rankings, and faster pages keep visitors around longer.

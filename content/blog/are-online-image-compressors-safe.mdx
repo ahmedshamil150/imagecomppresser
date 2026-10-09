@@ -1,0 +1,57 @@
+---
+title: "Are Online Image Compressors Safe?"
+description: "What happens to your photos when you use a web-based compressor — the real risks, the privacy-friendly alternative, and a pre-upload checklist."
+date: "2026-08-29"
+tags: ["privacy", "security"]
+---
+
+Most online image compressors are safe for ordinary photos, but the safety depends entirely on where your file goes: **upload-based tools send your image to a third-party server**, where it is stored temporarily (or longer), processed, and served back — while **browser-based tools like [PicShrink](/compress-image) never upload anything at all**. For private, personal, or confidential images, that distinction is the whole answer.
+
+## How the two architectures actually work
+
+**Upload compressors** follow the same pattern as any file-hosting service: your file travels over HTTPS to their infrastructure, sits in storage while a server-side encoder (usually TinyPNG-style quantization or libvips) processes it, and waits for you to download the result. The privacy question is not whether the transfer is encrypted — it is what happens to the file while it is on their disk, who can access it, how long the retention policy is, and whether the operator's business model depends on the data.
+
+**Browser-based compressors** decode the image with local APIs (canvas, WebAssembly), re-encode it in memory, and hand the result to your download folder. No network request carries your pixels anywhere. The privacy question shrinks to: *does the site load third-party scripts that could read the page?* — a much smaller surface.
+
+## The realistic risks of upload-based tools
+
+- **Retention ambiguity.** "Deleted after one hour" is a policy, not a guarantee you can verify.
+- **Staff and contractor access.** Someone debugging a failed job may see your file.
+- **Secondary use.** ToS clauses sometimes allow using uploads for "service improvement" — vague enough to include model training.
+- **Breach exposure.** A server holding millions of user photos is exactly the kind of target attackers like.
+- **Third-party requests.** Advertising and analytics scripts on the page can, in the worst cases, observe file metadata.
+
+None of this makes every upload tool malicious — many are reputable. It means you are trusting them with something you cannot audit.
+
+## The checklist before you upload anything
+
+If you must use an upload-based service (for a feature a browser tool lacks):
+
+1. **Never upload anything you would not email to a stranger.** No IDs, contracts, unreleased work, or private photos.
+2. **Read the retention and deletion clauses**, not just the marketing.
+3. **Check the privacy policy** for advertising or analytics partners receiving data.
+4. **Look for a browser-based alternative first** — for compression and resizing, one almost always exists.
+
+## Why local processing is different
+
+The [compressor on this site](/compress-image) reads your file with `createImageBitmap()`, draws it onto a canvas, and exports it with `canvas.toBlob()` — all standard browser APIs executing in your own tab. There is no upload endpoint, no storage bucket, and no server-side copy to breach. Close the tab and the working data is garbage-collected.
+
+The same architecture covers [resizing](/resize-image), [format conversion](/formats), and [batch jobs](/bulk-image-compressor). You get identical output quality to server tools because the codecs do the same math — they just run on your device.
+
+## One caveat: your browser's extensions
+
+Local processing removes server risk, not browser risk. A malicious extension with broad page access could theoretically read rendered content. Use a clean browser profile for sensitive work, or the private/incognito window with extensions disabled.
+
+## FAQ
+
+### Do online image compressors keep my photos?
+
+Upload-based services may keep files briefly (or longer) according to their retention policy. Browser-based tools like this one keep nothing — no file ever reaches a server.
+
+### Is it safe to compress ID cards or documents online?
+
+Not in an upload-based tool. If a service must be used, prefer one that processes locally in the browser so the document never leaves your machine.
+
+### Does local compression produce worse results than server tools?
+
+No. Browser codecs use the same underlying algorithms (libjpeg-turbo-style encoders, WebP and AVIF reference codecs). Quality is determined by your settings, not by where the math runs.

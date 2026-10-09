@@ -1,0 +1,57 @@
+---
+title: "How to Compress Multiple Images at Once"
+description: "Batch-compress folders of photos and screenshots in one pass: settings that keep results consistent, and a free tool that processes 30 files at a time."
+date: "2026-09-10"
+tags: ["bulk", "compression"]
+---
+
+The fastest way to compress many images at once is a batch compressor: drop all your files into one queue, apply a single quality setting, and download the optimized results together. The [bulk image compressor on this site](/bulk-image-compressor) accepts up to 30 JPG, PNG, WebP or AVIF files per batch, processes them two at a time in your browser, and hands back a single ZIP — no uploads, no accounts.
+
+## Why batch processing beats one-by-one editing
+
+Opening a desktop editor, adjusting a quality slider, exporting, renaming, repeating — fifty times — is the kind of work that quietly eats an afternoon. Batching turns it into a single decision: one quality setting, one download.
+
+Consistency is the second benefit. When every image in a gallery or product catalog is exported with identical settings, the page looks intentional: same sharpness, same color behavior, same file-size range. Mixed exports produce visible jumpy quality as visitors scroll.
+
+## Preparing your batch
+
+1. **Gather the originals in one folder.** Always compress from the source files, never from already-compressed copies — every lossy pass removes more detail.
+2. **Separate content types if needed.** Photos and screenshots want different settings. If your batch mixes both, run photos at quality 80 and screenshots at 90+ in two passes.
+3. **Decide dimensions first.** If the images are larger than where they will be displayed, set a resize mode (1600 px longest side is a safe default) so compression and resizing happen together.
+
+## Running the batch
+
+1. Open the [bulk compressor](/bulk-image-compressor) and select up to 30 files at once — the picker accepts multi-select, and drag-and-drop works too.
+2. Choose the output format. **Auto** is usually right: photos stay JPG, PNG graphics become WebP.
+3. Set quality and any resize options. Every file in the queue re-optimizes automatically when you change a setting, so you can dial it in live.
+4. Review the per-file savings list. Anything that barely shrank is probably already efficient — or needs a format change.
+5. Hit **Download all (ZIP)**.
+
+File names are preserved with a `-picshrink` suffix and the new extension, and duplicates are renamed automatically so nothing overwrites anything in the archive.
+
+## Recommended batch settings
+
+- **Photographs:** WebP, quality 80, max side 1600 px
+- **Screenshots:** WebP, quality 90, original dimensions
+- **Product catalog:** WebP, quality 85, max side 1200 px
+- **Avatars/thumbnails:** WebP, quality 70, width 400 px
+
+These defaults typically cut a mixed folder by 70–90% in total weight.
+
+## Handling larger folders
+
+The 30-file batch limit keeps memory usage safe on phones and laptops. For a 200-image folder, simply run seven batches — with settings that reapply instantly, the repetition costs almost nothing. Sort by file size first and put the biggest files in the earliest batches so you see the largest wins immediately.
+
+## FAQ
+
+### Is there a limit on how many images I can compress?
+
+30 per batch, which fits most use cases (a product page, a blog post set, a camera-roll cleanup). Larger collections just need another run.
+
+### Will all images get the same quality?
+
+Yes — one setting applies to the queue, which is what makes the results consistent. Remove outliers and process them separately if they need different treatment.
+
+### Do I have to upload my photos?
+
+No. The [bulk compressor](/bulk-image-compressor) runs entirely in your browser; files are read and written locally, so private images stay private.

@@ -1,0 +1,78 @@
+---
+title: "JPG vs PNG vs WebP vs AVIF: Which Format Should You Use?"
+description: "A clear comparison of JPG, PNG, WebP and AVIF — compression type, transparency, quality and size — with a simple decision rule for each."
+date: "2026-09-26"
+tags: ["formats", "web performance"]
+---
+
+The short answer: use **JPG for photos**, **PNG for graphics that need transparency or pixel-perfect text**, **WebP as the default for modern websites**, and **AVIF when you want the smallest possible files**. WebP and AVIF both support transparency and beat JPG on size at equal quality, and every format here works with the [free converters on this site](/formats).
+
+## JPG: the reliable workhorse
+
+JPG has been the standard for photographs since the 1990s, and its strength is still real: excellent compression for continuous-tone images and universal compatibility — literally every app, camera and website accepts it.
+
+The drawbacks: no transparency, quality degrades a little each time you re-save, and modern formats simply beat it on efficiency. Use JPG when you need maximum compatibility or are dealing with legacy systems.
+
+## PNG: lossless precision
+
+PNG stores every pixel exactly, supports full alpha-channel transparency, and renders sharp text and hard edges perfectly. That makes it the right choice for screenshots, logos, icons and diagrams.
+
+The cost is size. Photographic content saved as PNG is typically 5–10× larger than the same image as JPG. If your PNG contains a photo, [convert it to WebP or JPG](/png-to-webp) and watch the file shrink dramatically.
+
+## WebP: the modern default
+
+Google introduced WebP in 2010 and every mainstream browser has supported it for years. It uses prediction models to beat JPG by 25–50% at the same visual quality while still supporting transparency and animation.
+
+For blogs, stores, and landing pages, WebP should be your default export format. Serve it with a JPG fallback via the HTML `<picture>` element if you still support ancient software.
+
+- [Convert JPG to WebP →](/jpg-to-webp)
+- [Convert PNG to WebP →](/png-to-webp)
+
+## AVIF: the smallest files
+
+AVIF comes from the AV1 video codec and typically lands 20–40% below WebP at comparable quality — especially at lower quality settings where older codecs fall apart. It also handles high dynamic range and 10-bit color.
+
+The trade-off is encoding speed: AVIF takes noticeably longer to produce, which matters little for one-off web assets and a lot for bulk video-frame work. Modern browsers support it, but you should still ship fallbacks.
+
+## Head-to-head comparison
+
+| Format | Compression | Transparency | Best for | Relative size |
+| --- | --- | --- | --- | --- |
+| JPG | Lossy | No | Photos, legacy support | Medium |
+| PNG | Lossless | Yes | Screenshots, logos | Large |
+| WebP | Lossy + lossless | Yes | Everyday web images | Small |
+| AVIF | Lossy + lossless | Yes | Smallest web assets | Smallest |
+
+## A one-line decision rule
+
+Ask what the image contains:
+
+1. **Photo** → WebP (fallback JPG)
+2. **Screenshot or logo with transparency** → PNG for editing, WebP/AVIF for publishing
+3. **Must work in a decades-old app** → JPG
+4. **Every kilobyte counts** → AVIF
+
+## How to convert between formats for free
+
+Drop a file into the right converter and download the result — processing happens entirely in your browser:
+
+- [PNG to JPG →](/png-to-jpg)
+- [JPG to WebP →](/jpg-to-webp)
+- [WebP to JPG →](/webp-to-jpg)
+- [PNG to WebP →](/png-to-webp)
+
+Or use the [general compressor](/compress-image), which keeps the original format when that is already the best choice.
+
+## FAQ
+
+### Which format has the best quality-to-size ratio?
+
+AVIF currently leads, with WebP close behind. Both beat JPG and massively beat PNG for photographic content.
+
+### Is WebP safe to use in 2026?
+
+Yes — all modern browsers support it, and Google, Wikipedia and major CDNs serve WebP by default. Provide a JPG or PNG fallback only if you must support very old clients.
+
+### Should screenshots be PNG or WebP?
+
+PNG is the safe editing format; WebP at quality 90+ is the better publishing format because it keeps text crisp at a fraction of the size. Test the output on your own screenshots before committing.

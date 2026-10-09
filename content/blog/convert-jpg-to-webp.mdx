@@ -1,0 +1,72 @@
+---
+title: "How to Convert JPG to WebP for Faster Websites"
+description: "Switch your photos from JPG to WebP and cut image weight by 30–70% — a step-by-step guide with quality settings and fallback advice."
+date: "2026-09-16"
+tags: ["converters", "WebP", "web performance"]
+---
+
+Converting JPG to WebP makes the same photo 30–70% smaller at the same visual quality. To do it, open a converter, drop your JPGs in, set quality to around 80, and download the WebP files — the [JPG to WebP converter on this site](/jpg-to-webp) handles batches of up to 30 and runs entirely in your browser.
+
+## Why WebP beats JPG for the web
+
+WebP uses prediction — modeling pixel values from neighboring blocks — instead of JPG's block-based transform alone. The result is better detail per byte across nearly every quality level. Google has served WebP as its default image format for years precisely because those savings compound at scale: a page with ten photos drops from 4 MB to under 1.5 MB without anyone noticing a quality difference.
+
+WebP also supports transparency and animation, which JPG never could, while remaining smaller than PNG for graphics.
+
+## Converting your images, step by step
+
+1. Open the [JPG to WebP converter](/jpg-to-webp).
+2. Drop your JPG photos — click to browse, or drag a selection straight from your file manager.
+3. Set the quality slider:
+   - **80** — best default for photos
+   - **65–70** — thumbnails and grids where size wins
+   - **90** — detailed shots with fine texture
+4. Download each WebP, or press **Download all (ZIP)** for the whole batch.
+
+Your originals stay untouched; every converted file gets a `-picshrink` suffix.
+
+## What quality should WebP use?
+
+WebP tolerates lower quality settings than JPG before artifacts appear, so you can push it a little further:
+
+| Use | WebP quality |
+| --- | --- |
+| Hero image | 80–85 |
+| Product photo | 80 |
+| Blog inline image | 75–80 |
+| Thumbnail grid | 60–70 |
+| Background texture | 50–60 |
+
+Always flip through the results at 100% zoom before publishing — your eyes are the final judge.
+
+## Serving WebP without breaking old browsers
+
+Every browser released since 2020 supports WebP, including Safari since version 14. If you still need coverage for legacy clients, use the responsive `picture` element:
+
+```html
+<picture>
+  <source srcset="photo.avif" type="image/avif" />
+  <source srcset="photo.webp" type="image/webp" />
+  <img src="photo.jpg" alt="..." width="1600" height="900" />
+</picture>
+```
+
+Modern browsers pick the first source they understand; old ones fall through to the JPG. Most CMS plugins (WordPress, Shopify, Next.js image loaders) do this automatically when WebP generation is enabled.
+
+## Do not forget dimensions
+
+Format switching is only half the win. Pair it with [resizing to display dimensions](/resize-image) — a 4000 px photo rendered at 800 px wastes more bytes than any format choice. Compress and resize in one pass with the [bulk tool](/bulk-image-compressor) when you have a folder to prepare.
+
+## FAQ
+
+### Is WebP quality 80 the same as JPG quality 80?
+
+No — WebP 80 generally looks slightly better than JPG 80 while producing a smaller file. The settings are not directly comparable across encoders.
+
+### Will WebP slow down my site?
+
+The opposite: smaller files download faster, which improves Largest Contentful Paint and overall Core Web Vitals. The only cost is marginally higher decode time, which is negligible.
+
+### Can I convert JPG to WebP in bulk?
+
+Yes — the [bulk converter](/jpg-to-webp) accepts up to 30 files per batch and packages the results into a single ZIP download.

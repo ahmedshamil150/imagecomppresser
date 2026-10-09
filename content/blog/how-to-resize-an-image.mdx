@@ -1,0 +1,65 @@
+---
+title: "How to Resize an Image Without Blurring It"
+description: "Shrink photos to exact pixel dimensions while keeping edges sharp — how step-wise downscaling prevents the blur that ruins resized images."
+date: "2026-10-01"
+tags: ["resizing", "image editing"]
+---
+
+Resizing an image without blurring comes down to how the pixels are resampled: downscale in repeated halving steps instead of one giant jump, and keep the aspect ratio locked so nothing stretches. This is exactly what the [free resizer on this site](/resize-image) does automatically — drop a photo, set a width, and download a sharp result in seconds.
+
+## Why resized images usually look soft
+
+When you shrink a 4000 px photo to 800 px in a single operation, the algorithm has to average 25 source pixels into every output pixel. Details that span several pixels — hair, text, foliage, fabric weave — collapse into grey mush. Operating systems and naive tools do exactly this one-shot resize, which is why most resized images look blurry.
+
+Progressive downscaling avoids the problem: resize to half, then half again, and so on. At each step the algorithm only has to merge a 2×2 neighborhood, preserving contrast and edges far better. The final image looks noticeably crisper at the same dimensions.
+
+## The right way to resize an image online
+
+1. Open the [image resizer](/resize-image) and drop your photo in.
+2. Choose a mode:
+   - **Set width** — for exact dimensions like 1600 px wide
+   - **Scale to %** — for quick proportional reductions (try 50%)
+   - **Max longest side** — for fitting a file into a size cap such as 1600 px
+3. Enter the target value. The height adjusts automatically to preserve proportions.
+4. Download the resized file, optionally compressed further with the quality slider.
+
+Because everything runs in your browser, even sensitive images never get uploaded.
+
+## What dimensions should you actually use?
+
+These defaults work well across most websites:
+
+- **Full-width hero image:** 1920 px wide (1600 px if you want leaner pages)
+- **Blog content image:** 800–1200 px wide
+- **Thumbnail:** 300–400 px wide
+- **Instagram/web export:** 1080 px on the longest side
+- **Email header:** 600 px wide
+
+Export at 2× (for example, a 1200 px image displayed at 600 px) if you need crispness on retina screens and can spare the extra bytes.
+
+## Resize first, compress second — in one pass
+
+Dimensions dominate file size. A 6000 px photo cannot be saved by quality tweaks alone; downscaling to 1600 px cuts the pixel count by 96%, and compression finishes the job. The two operations combined routinely take a 8 MB camera photo under 200 KB — a 97% reduction with no visible damage.
+
+The [bulk compressor](/bulk-image-compressor) applies resize and compression to up to 30 files at once, which is ideal for preparing a whole folder of images for a website.
+
+## Common resizing mistakes
+
+- **Stretching to fit.** Forcing both width and height independently distorts the image. Always scale proportionally.
+- **Upscaling small images.** Enlarging beyond the original dimensions invents pixels and looks soft. Downscale only.
+- **Repeatedly re-saving at new sizes.** Every pass degrades a lossy file. Resize once from the original.
+- **Ignoring file format.** A resized photo should be WebP or JPG, not PNG — see the [format comparison](/blog/jpg-vs-png-vs-webp-vs-avif).
+
+## FAQ
+
+### How do I resize an image without losing quality?
+
+Use step-wise downscaling (halving repeatedly) rather than one-shot scaling, and export from your highest-quality original exactly once. The [resizer on this site](/resize-image) does this automatically.
+
+### Does resizing change the aspect ratio?
+
+Not with proportional modes like "set width" or "max longest side" — the second dimension is calculated automatically so the image is never stretched.
+
+### What is the best size for a website image?
+
+1600 px on the longest side for hero images and 800–1200 px for content images strike the best balance between sharpness and page weight on modern screens.

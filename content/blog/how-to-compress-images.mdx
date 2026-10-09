@@ -1,0 +1,78 @@
+---
+title: "How to Compress an Image Without Losing Quality"
+description: "A practical guide to compressing JPG, PNG and WebP images so they shrink 50–90% with no visible quality loss — free and in your browser."
+date: "2026-10-05"
+tags: ["compression", "web performance"]
+---
+
+Compressing an image without losing visible quality means re-encoding it at a carefully chosen quality level — around 80 for photos — and letting modern codecs discard the data your eyes never notice. The result is typically a file that is 50–80% smaller but looks identical side by side. You can do it in seconds with the [free compressor on this site](/compress-image), and your file never leaves your device.
+
+## Why uncompressed images hurt your website
+
+Images account for roughly half of every page's weight. A single 5 MB phone photo on a landing page can push load times past the 2.5 second Largest Contentful Paint threshold that Google uses for ranking. On mobile networks, that means real people bouncing before your content appears.
+
+Compression fixes this immediately. The browser downloads fewer bytes, the page paints faster, and Core Web Vitals improve — often without touching a single line of code.
+
+## Lossy vs lossless: what you are actually choosing
+
+**Lossy compression** (JPG, WebP, AVIF) removes information that is statistically least visible — fine texture, subtle gradients, tiny details in noise. Pushed too far, you get blocky artifacts around edges. Kept at a sane quality level, nobody can tell.
+
+**Lossless compression** (PNG, lossless WebP) stores every pixel exactly. Files stay bigger, but screenshots, logos and text-heavy graphics remain pixel-perfect.
+
+The practical rule:
+
+- Photos → lossy, quality 80
+- Screenshots with text → lossy WebP at quality 90, or PNG if the file must be pixel-identical
+- Logos and icons with transparency → PNG or lossless WebP
+
+## Step-by-step: compress an image online
+
+1. Open the [image compressor](/compress-image) and drop your file into the box.
+2. Leave the output format on **Auto** — it picks the smartest option for your file type.
+3. Keep quality at **80** for photos, or raise it to **90** if the image has fine text or detail.
+4. Check the before/after sizes in the result card. If the savings are not enough, lower quality by 10 points and re-run.
+5. Click **Download** — the file is saved with a `-picshrink` suffix, so your original stays untouched.
+
+Everything runs locally in your browser. Nothing is uploaded, which also means there is no queue and no file-size ceiling beyond your own device's memory.
+
+## How much size can you realistically save?
+
+Typical results we see:
+
+- Phone photo (JPG) → **60–80% smaller** at quality 80
+- Screenshot (PNG) → **50–90% smaller** after converting to WebP
+- Product image (PNG to AVIF) → **80–95% smaller**
+- Scanned document (JPG) → **40–60% smaller**
+
+Doubling down — compress *and* [resize to 1600 px](/resize-image) — usually takes a 6 MB photo below 300 KB.
+
+## The quality settings cheat sheet
+
+| Use case | Format | Quality |
+| --- | --- | --- |
+| Blog hero photo | WebP | 80 |
+| E-commerce product shot | WebP/JPG | 85 |
+| Screenshot with text | PNG (lossless) or WebP | 90+ |
+| Thumbnail | WebP | 65 |
+| Email attachment | JPG | 75 |
+
+## Common mistakes to avoid
+
+- **Compressing a compressed file twice.** Each lossy pass discards more data. Always keep originals and export once.
+- **Using quality 100.** Maximum quality roughly doubles file size for almost no visible gain.
+- **Saving photos as PNG.** PNG is designed for graphics, not photographs — a photo PNG can be 10× larger than the same image as JPG.
+- **Ignoring dimensions.** A 6000 px image displayed at 800 px wastes 90% of its bytes. [Resize first](/resize-image), then compress.
+
+## FAQ
+
+### Does compressing an image reduce quality?
+
+Slightly, yes — lossy formats discard data. At quality 80 the change is virtually invisible on normal screens. Keep your original file if you plan to edit or print the image later.
+
+### What is the best free image compressor?
+
+The [compressor on this site](/compress-image) is free, requires no account, adds no watermark, and processes images in your browser so private files stay private.
+
+### Should I compress images before uploading them?
+
+Yes. Uploading a compressed file means faster transfers, faster page loads, and less storage — while keeping a copy of the original gives you a safe fallback.
