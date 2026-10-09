@@ -205,7 +205,7 @@ function drawScaled(
 
 type AvifModule = {
   encode: (
-    data: ImageData,
+    data: Uint8ClampedArray,
     width: number,
     height: number,
     options: Record<string, unknown>,
@@ -228,7 +228,7 @@ async function encodeAvif(canvas: HTMLCanvasElement, quality: number): Promise<B
   const ctx = canvas.getContext("2d");
   if (!ctx) throw new Error("canvas-unavailable");
   const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  const output = mod.encode(imageData, canvas.width, canvas.height, {
+  const output = mod.encode(imageData.data, canvas.width, canvas.height, {
     ...defaultOptions,
     quality,
     speed: 8,

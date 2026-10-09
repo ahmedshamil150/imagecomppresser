@@ -128,6 +128,7 @@ export default function ImageTool({ preset }: Props) {
               }),
             );
           } catch (err) {
+            console.error("[picshrink] process error:", err);
             if (runIdRef.current !== runId) return;
             commit(
               itemsRef.current.map((i) =>
@@ -400,7 +401,13 @@ export default function ImageTool({ preset }: Props) {
               <select
                 id="tool-resize-mode"
                 value={resizeMode}
-                onChange={(e) => setResizeMode(e.target.value as ResizeMode)}
+                onChange={(e) => {
+                  const mode = e.target.value as ResizeMode;
+                  setResizeMode(mode);
+                  if (mode === "percent" && (resizeValue > 400 || resizeValue < 1)) {
+                    setResizeValue(50);
+                  }
+                }}
                 className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200"
               >
                 {RESIZE_OPTIONS.map((opt) => (
