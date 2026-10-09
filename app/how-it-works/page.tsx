@@ -6,7 +6,7 @@ import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 export const metadata = pageMetadata({
   title: "How It Works",
   description:
-    "Learn how PicShrink compresses and resizes images entirely inside your browser — no uploads, no servers, no watermarks.",
+    "Learn how PickShrink compresses and resizes images entirely inside your browser — no uploads, no servers, no watermarks.",
   path: "/how-it-works",
 });
 
@@ -20,10 +20,10 @@ export default function HowItWorksPage() {
         ])}
       />
       <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-        How PicShrink works
+        How PickShrink works
       </h1>
       <p className="mt-4 text-lg leading-8 text-slate-600">
-        PicShrink processes images inside your browser using the same HTML5
+        PickShrink processes images inside your browser using the same HTML5
         canvas APIs that power modern web apps — the file is read from your
         device, optimized locally, and written back to your device. Nothing is
         ever sent to a server, which is why the tool is free and private at the
@@ -56,7 +56,7 @@ export default function HowItWorksPage() {
         <p className="mt-4 leading-7 text-slate-600">
           Traditional converters upload your file to a server, queue it, process
           it, and let you download it again — wasting bandwidth, introducing
-          privacy risk, and creating a storage liability. PicShrink skips the
+          privacy risk, and creating a storage liability. PickShrink skips the
           server entirely.
         </p>
         <ul className="mt-4 list-disc space-y-2 pl-6 leading-7 text-slate-600">

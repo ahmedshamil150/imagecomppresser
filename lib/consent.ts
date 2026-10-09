@@ -1,6 +1,6 @@
 export type ConsentChoice = "accepted" | "rejected";
 
-const KEY = "picshrink-consent";
+const KEY = "pickshrink-consent";
 
 export function getConsent(): ConsentChoice | null {
   if (typeof window === "undefined") return null;

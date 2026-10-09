@@ -6,7 +6,7 @@ import { CONTACT_EMAIL } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "About",
   description:
-    "PicShrink is a free, privacy-first image compressor and resizer built for creators, bloggers and store owners who need fast images without uploading them anywhere.",
+    "PickShrink is a free, privacy-first image compressor and resizer built for creators, bloggers and store owners who need fast images without uploading them anywhere.",
   path: "/about",
 });
 
@@ -20,10 +20,10 @@ export default function AboutPage() {
         ])}
       />
       <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-        About PicShrink
+        About PickShrink
       </h1>
       <p className="mt-4 text-lg leading-8 text-slate-600">
-        PicShrink is a free image compressor and resizer built for people who
+        PickShrink is a free image compressor and resizer built for people who
         publish on the web — bloggers, students, store owners, and developers
         who need smaller images without installing software or trusting a
         stranger&apos;s server with their files.
@@ -34,7 +34,7 @@ export default function AboutPage() {
           Most image tools work by uploading your photo to a remote server,
           processing it there, and handing it back. That model is slow, wasteful
           and — for private photos, contracts, or unreleased product shots — a
-          genuine risk. PicShrink takes the opposite approach: everything runs
+          genuine risk. PickShrink takes the opposite approach: everything runs
           inside your browser using HTML canvas and WebAssembly, so your files
           never leave your device.
         </p>

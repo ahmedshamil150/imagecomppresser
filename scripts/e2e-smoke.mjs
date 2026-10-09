@@ -4,7 +4,7 @@ import path from "node:path";
 import os from "node:os";
 
 const BASE = "http://localhost:3000";
-const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "picshrink-e2e-"));
+const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "pickshrink-e2e-"));
 
 function makeBmp(file, width, height) {
   const rowSize = Math.floor((24 * width + 31) / 32) * 4;
@@ -106,7 +106,7 @@ try {
       .getByRole("button", { name: "Download" })
       .click(),
   ]);
-  check("single file download", (await dl1.suggestedFilename()).endsWith("-picshrink.avif"), await dl1.suggestedFilename());
+  check("single file download", (await dl1.suggestedFilename()).endsWith("-pickshrink.avif"), await dl1.suggestedFilename());
 
   const [dl2] = await Promise.all([
     page.waitForEvent("download", { timeout: 30000 }),

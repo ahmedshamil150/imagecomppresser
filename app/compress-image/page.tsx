@@ -7,11 +7,11 @@ const page = {
     "Compress images online for free. Shrink JPG, PNG, WebP and AVIF file sizes in your browser with a quality slider — no upload, no watermark, no software.",
   h1: "Compress Images Online",
   intro:
-    "Compress images for free without installing anything. PicShrink reduces the file size of JPG, PNG, WebP and AVIF photos directly in your browser — your files are never uploaded, and you keep full control of quality with a simple slider.",
+    "Compress images for free without installing anything. PickShrink reduces the file size of JPG, PNG, WebP and AVIF photos directly in your browser — your files are never uploaded, and you keep full control of quality with a simple slider.",
   sectionHeading: "Why compress your images?",
   paragraphs: [
     "Large images are the number one cause of slow websites. A single uncompressed phone photo can weigh 5–10 MB, which slows page load times, hurts Core Web Vitals rankings, and burns mobile data. Compressing images before you publish typically cuts file sizes by 50–90% with little or no visible difference.",
-    "PicShrink re-encodes your image at the quality level you choose. For photos, quality 80 gives an excellent balance of size and sharpness. For screenshots and graphics with text, switch the output format to PNG or WebP to keep edges crisp — or pick AVIF for the smallest possible file.",
+    "PickShrink re-encodes your image at the quality level you choose. For photos, quality 80 gives an excellent balance of size and sharpness. For screenshots and graphics with text, switch the output format to PNG or WebP to keep edges crisp — or pick AVIF for the smallest possible file.",
   ],
   bullets: [
     "Runs entirely in your browser — files are never uploaded",
@@ -55,7 +55,7 @@ const page = {
     {
       question: "Are my images uploaded to a server?",
       answer:
-        "No. Decoding, compression and download all happen locally in your browser tab. Your images never leave your device, which makes PicShrink safe for private or sensitive photos.",
+        "No. Decoding, compression and download all happen locally in your browser tab. Your images never leave your device, which makes PickShrink safe for private or sensitive photos.",
     },
     {
       question: "What quality setting should I use?",

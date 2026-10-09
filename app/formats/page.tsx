@@ -63,7 +63,7 @@ export default function FormatsPage() {
         <strong>WebP</strong> as the default for modern websites, and{" "}
         <strong>AVIF</strong> when you want the smallest file possible. WebP
         and AVIF both support transparency, and every format works with
-        PicShrink&apos;s free converter tools.
+        PickShrink&apos;s free converter tools.
       </p>
 
       <div className="mt-8 space-y-4">

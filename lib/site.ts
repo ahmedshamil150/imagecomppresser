@@ -1,4 +1,4 @@
-export const SITE_NAME = "PicShrink";
+export const SITE_NAME = "PickShrink";
 
 export const SITE_TAGLINE = "Free Online Image Compressor & Resizer";
 
@@ -10,7 +10,7 @@ export const SITE_URL = (
 ).replace(/\/+$/, "");
 
 export const CONTACT_EMAIL =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@picshrink.app";
+  process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "hello@pickshrink.com";
 
 export const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
 

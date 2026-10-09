@@ -1,4 +1,4 @@
-# PicShrink — Free Image Compressor & Resizer
+# PickShrink — Free Image Compressor & Resizer
 
 Browser-based image compression, resizing, and format conversion (JPG, PNG, WebP, AVIF). All processing happens client-side — files are never uploaded. Built with Next.js 16 (App Router, Turbopack), Tailwind CSS 4, and a WebAssembly AVIF encoder.
 

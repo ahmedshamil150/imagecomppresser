@@ -257,7 +257,7 @@ function canvasToBlob(
 
 function outputName(name: string, format: OutputFormat): string {
   const base = name.replace(/\.[^.]+$/, "") || "image";
-  return `${base}-picshrink.${FORMAT_EXT[format]}`;
+  return `${base}-pickshrink.${FORMAT_EXT[format]}`;
 }
 
 export async function processFile(

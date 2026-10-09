@@ -128,7 +128,7 @@ export default function ImageTool({ preset }: Props) {
               }),
             );
           } catch (err) {
-            console.error("[picshrink] process error:", err);
+            console.error("[pickshrink] process error:", err);
             if (runIdRef.current !== runId) return;
             commit(
               itemsRef.current.map((i) =>
@@ -258,7 +258,7 @@ export default function ImageTool({ preset }: Props) {
       }
       const blob = await zip.generateAsync({ type: "blob" });
       const url = URL.createObjectURL(blob);
-      triggerDownload(url, "picshrink-images.zip");
+      triggerDownload(url, "pickshrink-images.zip");
       setTimeout(() => URL.revokeObjectURL(url), 30_000);
     } finally {
       setZipping(false);

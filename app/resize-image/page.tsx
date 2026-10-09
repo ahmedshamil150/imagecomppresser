@@ -7,11 +7,11 @@ const page = {
     "Resize images online for free. Change photo dimensions by width, percentage or maximum size in your browser — aspect ratio preserved, no upload, no watermark.",
   h1: "Resize Images Online",
   intro:
-    "Resize any image to exact dimensions in seconds. Set a target width, scale by percentage, or cap the longest side — PicShrink keeps the aspect ratio intact and sharpens the result with step-wise downscaling, all locally in your browser.",
+    "Resize any image to exact dimensions in seconds. Set a target width, scale by percentage, or cap the longest side — PickShrink keeps the aspect ratio intact and sharpens the result with step-wise downscaling, all locally in your browser.",
   preset: { resizeMode: "width" as const, resizeValue: 1200 },
   sectionHeading: "Resize images the right way",
   paragraphs: [
-    "Resizing is more than shrinking pixels — it is about how those pixels are resampled. A naive one-shot downscale turns fine detail into mush, especially on photos with text, foliage, or high contrast edges. PicShrink scales images down in repeated halving steps, which preserves detail the way professional editors do.",
+    "Resizing is more than shrinking pixels — it is about how those pixels are resampled. A naive one-shot downscale turns fine detail into mush, especially on photos with text, foliage, or high contrast edges. PickShrink scales images down in repeated halving steps, which preserves detail the way professional editors do.",
     "Choose your mode above: set an exact pixel width for a blog header, scale by percentage for a quick reduction, or set the maximum longest side to fit a 1600 px social-media limit. Results show the new dimensions and file size before you download.",
   ],
   bullets: [
@@ -41,7 +41,7 @@ const page = {
     {
       question: "How do I resize an image without losing quality?",
       answer:
-        "Downscale in steps instead of one jump, and avoid resizing the same file repeatedly. PicShrink automatically halves the image progressively until it reaches the target size, which keeps edges and fine detail sharp.",
+        "Downscale in steps instead of one jump, and avoid resizing the same file repeatedly. PickShrink automatically halves the image progressively until it reaches the target size, which keeps edges and fine detail sharp.",
     },
     {
       question: "Will resizing change the aspect ratio?",

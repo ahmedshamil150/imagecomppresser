@@ -7,11 +7,11 @@ const page = {
     "Compress multiple images at once for free. Batch-compress up to 30 JPG, PNG, WebP or AVIF files in your browser and download them as a ZIP — no upload, no watermark.",
   h1: "Bulk Image Compressor",
   intro:
-    "Compress dozens of images in one go. Drop up to 30 JPG, PNG, WebP or AVIF files, let PicShrink optimize them all with the same settings, and download the whole batch as a single ZIP file — everything stays in your browser.",
+    "Compress dozens of images in one go. Drop up to 30 JPG, PNG, WebP or AVIF files, let PickShrink optimize them all with the same settings, and download the whole batch as a single ZIP file — everything stays in your browser.",
   sectionHeading: "Batch compression that respects your time",
   paragraphs: [
     "Optimizing images one by one is the most tedious part of publishing content. Whether you are preparing a product catalog, a photo gallery, or a folder of screenshots, batch compression turns an hour of clicking into a few seconds of waiting.",
-    "PicShrink processes files two at a time to keep your device responsive, shows per-file savings as each result lands, and lets you re-run the entire batch with different quality settings instantly. The final ZIP keeps your original file names with a -picshrink suffix so nothing collides.",
+    "PickShrink processes files two at a time to keep your device responsive, shows per-file savings as each result lands, and lets you re-run the entire batch with different quality settings instantly. The final ZIP keeps your original file names with a -pickshrink suffix so nothing collides.",
   ],
   bullets: [
     "Up to 30 images per batch",
@@ -50,7 +50,7 @@ const page = {
     {
       question: "Will the ZIP keep my original file names?",
       answer:
-        "Names are kept with a -picshrink suffix and the new extension (for example photo-picshrink.webp). Duplicates are renamed automatically so no file overwrites another.",
+        "Names are kept with a -pickshrink suffix and the new extension (for example photo-pickshrink.webp). Duplicates are renamed automatically so no file overwrites another.",
     },
     {
       question: "Is bulk compression free?",

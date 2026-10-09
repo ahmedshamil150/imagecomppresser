@@ -1,8 +1,8 @@
-# PicShrink
+# PickShrink
 
 > Free online image compressor and resizer. Shrink JPG, PNG, WebP and AVIF files, convert between formats, and resize images — all processed locally in the user's browser. No uploads, no watermarks, no account required.
 
-PicShrink is a browser-based image optimization toolkit. Images are decoded, resized, and re-encoded with the browser's own image codecs (plus a WebAssembly AVIF encoder), so files never leave the user's device.
+PickShrink is a browser-based image optimization toolkit. Images are decoded, resized, and re-encoded with the browser's own image codecs (plus a WebAssembly AVIF encoder), so files never leave the user's device.
 
 ## Tools
 

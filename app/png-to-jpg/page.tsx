@@ -7,7 +7,7 @@ const page = {
     "Convert PNG to JPG online for free. Turn PNG screenshots and graphics into compact JPG photos directly in your browser — no upload, no watermark, instant download.",
   h1: "PNG to JPG Converter",
   intro:
-    "Convert PNG files to JPG in one drop. JPG files are dramatically smaller than PNG for photographs and screenshots, and PicShrink converts yours locally in the browser with a white background so transparency never turns black.",
+    "Convert PNG files to JPG in one drop. JPG files are dramatically smaller than PNG for photographs and screenshots, and PickShrink converts yours locally in the browser with a white background so transparency never turns black.",
   preset: { format: "image/jpeg" as const, hideFormat: true },
   sectionHeading: "Why convert PNG to JPG?",
   paragraphs: [
@@ -46,7 +46,7 @@ const page = {
     {
       question: "What happens to transparent backgrounds?",
       answer:
-        "JPG does not support transparency. PicShrink flattens transparent areas onto a white background, which is what documents, email clients and most websites expect.",
+        "JPG does not support transparency. PickShrink flattens transparent areas onto a white background, which is what documents, email clients and most websites expect.",
     },
     {
       question: "How much smaller does the file get?",

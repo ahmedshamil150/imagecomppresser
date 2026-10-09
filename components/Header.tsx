@@ -15,7 +15,7 @@ export default function Header() {
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="flex items-center gap-2" aria-label={`${SITE_NAME} home`}>
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-sm font-bold text-white">
-            Ps
+            Pk
           </span>
           <span className="text-lg font-bold tracking-tight text-slate-900">
             {SITE_NAME}

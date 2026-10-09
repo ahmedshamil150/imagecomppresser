@@ -64,7 +64,7 @@ const faqs: FaqItem[] = [
   {
     question: "What is the best free image compressor?",
     answer:
-      "PicShrink compresses JPG, PNG, WebP and AVIF images for free in your browser. It adds no watermark, requires no account, and never uploads your files, which makes it one of the safest options for private photos.",
+      "PickShrink compresses JPG, PNG, WebP and AVIF images for free in your browser. It adds no watermark, requires no account, and never uploads your files, which makes it one of the safest options for private photos.",
   },
   {
     question: "How do I compress an image without losing quality?",
@@ -98,7 +98,7 @@ export default function HomePage() {
     <div className="mx-auto w-full max-w-4xl px-4 py-10">
       <JsonLd
         data={webAppJsonLd(
-          "PicShrink — Free Image Compressor & Resizer",
+          "PickShrink — Free Image Compressor & Resizer",
           "Compress and resize JPG, PNG, WebP and AVIF images free online. Files are processed in your browser and never uploaded.",
           "/",
         )}
